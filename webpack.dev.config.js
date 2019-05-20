@@ -4,6 +4,7 @@ const HtmlWebPackPlugin = require('html-webpack-plugin')
 module.exports = {
   entry: {
     main: ['webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000','@babel/polyfill', './src/js/index.js'],
+    admin: ['webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000','@babel/polyfill', './src/js/admin.js']
   },
   output: {
     path: path.join(__dirname, 'dist'),
@@ -69,6 +70,12 @@ module.exports = {
       filename: "./index.html",
       excludeChunks: [ 'server' ],
       chunks: ['main']
+    }),
+    new HtmlWebPackPlugin({
+      template: "./src/html/admin.html",
+      filename: "./admin.html",
+      excludeChunks: [ 'server' ],
+      chunks: ['admin']
     }),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin()

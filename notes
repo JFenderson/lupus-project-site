@@ -1,0 +1,3 @@
+need to not show html before styles show
+implement firebase to hold images and show as a slideshow
+create blog (blogs entries will be stored in either firestore or database)

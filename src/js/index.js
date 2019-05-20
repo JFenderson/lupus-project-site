@@ -1,13 +1,18 @@
 // import logMessage from './logger'
-import '../styles/styles.scss'
-import moment from 'moment'
-import $ from 'jquery'
+import '../styles/styles.scss';
+import moment from 'moment';
+import $ from 'jquery';
 
-
-$(window).on('load', function() {
+$(document).ready(function() {
   $(".pageloader").delay(2000).fadeOut("slow");
   $('body').removeClass('hidden');
-  
+  // // Log message to console
+  // logMessage('A very warm welcome to Expack!')
+  // // Needed for Hot Module Replacement
+  // if(typeof(module.hot) !== 'undefined') {
+  //   module.hot.accept() // eslint-disable-line no-undef  
+  // }
+
   $(window).scroll(function () {
       //if you hard code, then use console
       //.log to determine when you want the 

@@ -29,6 +29,7 @@
     "eslint-watch": "^4.0.2",
     "express": "^4.16.4",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "firebase-admin": "^7.3.0",
     "googleapis": "^27.0.0",
     "jquery": "^3.3.1",
     "materialize-css": "^1.0.0-rc.2",

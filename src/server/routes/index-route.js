@@ -5,8 +5,8 @@ import photoRouter from './photos';
 
 let router = Router();
 
-router.use('/volunteer', emailRouter);
-// router.use('/calendar', calendarRouter);
+router.use('/member', emailRouter);
+router.use('/calendar', calendarRouter);
 router.use('/photos', photoRouter)
 
 export default router;
