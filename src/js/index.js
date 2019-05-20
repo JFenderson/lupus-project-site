@@ -7,12 +7,6 @@ import $ from 'jquery'
 $(window).on('load', function() {
   $(".pageloader").delay(2000).fadeOut("slow");
   $('body').removeClass('hidden');
-  // // Log message to console
-  // logMessage('A very warm welcome to Expack!')
-  // // Needed for Hot Module Replacement
-  // if(typeof(module.hot) !== 'undefined') {
-  //   module.hot.accept() // eslint-disable-line no-undef  
-  // }
   
   $(window).scroll(function () {
       //if you hard code, then use console
@@ -45,12 +39,11 @@ $(window).on('load', function() {
     let name = $('#name').val();
     let email = $('#email').val();
     let phone = $('#phone-number').val();
-    let classification = $('#classification').val();
 
-    fetch(`http://localhost:8080/api/member`, {
+    fetch(`http://localhost:8080/api/volunteer`, {
       method: 'POST',
       body: JSON.stringify({
-        name: name, email: email ,phone: phone, classification: classification 
+        name: name, email: email ,phone: phone
       }),
       headers: {
         'Content-Type': 'application/json'

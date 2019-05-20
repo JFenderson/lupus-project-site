@@ -5,7 +5,7 @@ import webpack from 'webpack'
 import webpackDevMiddleware from 'webpack-dev-middleware'
 import webpackHotMiddleware from 'webpack-hot-middleware'
 import config from '../../webpack.dev.config.js'
-// import routes from './routes/index-route'
+import routes from './routes/index-route'
 import cors from 'cors'
 import '@babel/polyfill'
 const app = express(),
@@ -25,7 +25,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true}));
 app.use(express.static(path.join(__dirname + '../../src')));
 app.use(express.static(path.join(__dirname + '../vendors')));
-// app.use('/api', routes);
+app.use('/api', routes);
 app.set('port', process.env.PORT || 8080)
 app.listen(app.get('port'), (err) => {
     if(err){
